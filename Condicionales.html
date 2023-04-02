@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hola</title>
+</head>
+<body>
+    <h1 id="resultado"></h1>
+    <p id="a"></p>
+    <p id="b"></p>
+    <p id="c"></p>
+</body>
+ <script>
+    let a,b,c;
+    alert("Ingresa 3 numeros");
+    a = prompt('Ingresa el valor de a: ');
+    b = prompt('Ingresa el valor de b: ');
+    c = prompt('Ingresa el valor de c: ');
+
+    if (a==b && a==c ){
+        console.log("(A=B=C)" );
+        console.log( "(" + a + "=" + b + "=" + c + ")" );
+    }
+
+    else if(a==b && a>c){
+        console.log("(A=B)>C" );
+        console.log("(" + a + "=" + b +")" + ">" + c);
+    }else if(a==c && a>b){
+        console.log("(A=C)>B" );
+        console.log("(" + a + "=" + c +")" + ">" + b);
+    }else if(b==c && b>a){
+        console.log("(B=C)>A" );
+        console.log( "(" + b + "=" + c +")"+">"+ a );
+    }
+
+    else if(a>b && a>c){   
+         if (b==c) {
+            console.log("A>(B=C)" );
+            console.log( a + ">" +"(" + b + "=" + c +")" );
+        }else if (b>c) {
+            console.log("A>B>C" );
+            console.log( a + ">" + b +">"+ c ); 
+        } else if(c>b) {
+            console.log("A>C>B" );
+            console.log( a + ">" + c +">"+ b );
+        }
+
+    } else if(b>a && b>c) { 
+        if(a==c){
+            console.log("B>(A=C)" );
+            console.log( b + ">" +"(" + a + "=" + c +")" );
+        }else if(a>c){
+            console.log("B>A>C" );
+            console.log( b + ">" + a +">"+ c );
+        }else if(c>a){
+            console.log("B>C>A" );
+            console.log( b + ">" + c +">"+ a );
+        }
+       
+    } else if(c>a && c>b){
+        if(a==b){
+            console.log("C>(A=B)" );
+            console.log( c + ">" +"(" + a + "=" + b +")" );
+        }else if(a>b){
+            console.log("C>A>B" );
+            console.log( c + ">" + a +">"+ b );
+        }else if(b>a){
+            console.log("C>B>A" );
+            console.log( c + ">" + b +">"+ a );
+        }
+    }
+
+
+    document.getElementById('a').innerHTML = ('A: ') + a;
+    document.getElementById('b').innerHTML = ('B: ') + b;
+    document.getElementById('c').innerHTML = ('C: ') + c;
+
+
+
+
+ </script>
+</html>
