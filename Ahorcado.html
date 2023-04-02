@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahorcado</title>
+</head>
+<body>
+    <section>
+        <div id="vidas">
+            Numero de intentos: 
+        </div>
+        <input type="text" name="texto" id="texto"><br>
+        <input type="button" id ="comprobar" value="enviar"> <br>
+        <div id="palabra">
+    
+
+        </div>
+
+        <script>
+            
+
+            function seleccionarPalabra(palabras){
+                return palabras[Math.floor(Math.random() * datos.legth)];
+            }
+
+            let palabras =['telefono','computadora','television','teclado','mouse'];
+
+            console.log(seleccionarPalabra(palabras));
+
+        </script>
+    </section>
+</body>
+</html>
